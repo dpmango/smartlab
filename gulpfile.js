@@ -32,7 +32,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function(){
-  watch([path.watch.style], function(event, cb) {
+  watch(['./sass/**/*.{sass,scss}'], function(event, cb) {
     gulp.start('styles');
   });
 });
@@ -41,8 +41,18 @@ gulp.task('watch', function(){
 gulp.task('webserver', function () {
   browserSync({
     server: {
-      baseDir: "./"
+      baseDir: './',
+      directory: false,
+      serveStaticOptions: {
+        extensions: ['html']
+      }
     },
+    files: [
+      './*.html',
+      './css/*.css',
+      './img/**/*',
+      './images/**/*'
+    ],
     tunnel: false,
     host: 'localhost',
     port: 3000,

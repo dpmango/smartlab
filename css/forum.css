@@ -268,7 +268,7 @@ input:focus {
 }
 
 .upbar_arrow {
-  background: url(images/head_arrow.png) no-repeat;
+  background: url(../images/head_arrow.png) no-repeat;
   background-position: right 0;
   margin: 23px 8px 0 7px;
   width: 8px;
@@ -470,7 +470,7 @@ ul.navitext li {
     -webkit-border-radius: 0px 5px 5px 0;
             border-radius: 0px 5px 5px 0;
     background-color: #2d2d2d;
-    background-image: url("hidden.png");
+    background-image: url("../img/hidden.png");
     -webkit-background-size: contain;
             background-size: contain;
     background-repeat: no-repeat;
@@ -482,7 +482,7 @@ ul.navitext li {
   }
   .hidden_menu a:hover {
     background-color: #4d4d4d;
-    background-image: url("hidden2.png");
+    background-image: url("../img/hidden2.png");
     -webkit-background-size: contain;
             background-size: contain;
     background-repeat: no-repeat;
@@ -722,7 +722,7 @@ ul.navitext li {
 
 /*---------------------------Факторы роста и падения----------------------------- */
 .list-reasons {
-  list-style-image: url("up.gif");
+  list-style-image: url("../img/up.gif");
   padding: 5px;
 }
 
@@ -731,7 +731,7 @@ ul.navitext li {
 }
 
 .list-reasons2 {
-  list-style-image: url("down.gif");
+  list-style-image: url("../img/down.gif");
   padding: 5px;
 }
 
@@ -855,30 +855,30 @@ a.reply:hover {
 }
 
 #th-up {
-  background: url(thumbs3.gif) no-repeat scroll 0px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll 0px 0px;
 }
 
 #th-dn {
   margin-left: 5px;
-  background: url(thumbs3.gif) no-repeat scroll -15px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -15px 0px;
 }
 
 #th-up:hover {
-  background: url(thumbs3.gif) no-repeat scroll -30px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -30px 0px;
 }
 
 #th-dn:hover {
-  background: url(thumbs3.gif) no-repeat scroll -45px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -45px 0px;
 }
 
 /*Если нажаты кнопки лайка или дизлайка */
 #th-up-p {
-  background: url(thumbs3.gif) no-repeat scroll -30px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -30px 0px;
 }
 
 #th-dn-p {
   margin-left: 5px;
-  background: url(thumbs3.gif) no-repeat scroll -45px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -45px 0px;
 }
 
 .cm_mrk {
@@ -902,11 +902,11 @@ a.reply:hover {
   width: 16px;
   height: 24px;
   margin-left: 15px;
-  background: url(thumbs3.gif) no-repeat scroll -60px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -60px 0px;
 }
 
 #cm_opt:hover {
-  background: url(thumbs3.gif) no-repeat scroll -75px 0px;
+  background: url(../img/thumbs3.gif) no-repeat scroll -75px 0px;
 }
 
 /*Конец Формат меню под комментарием */
