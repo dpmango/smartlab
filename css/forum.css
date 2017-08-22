@@ -327,12 +327,24 @@ a.likes_ind {
   background-color: #9c3636;
 }
 
+a.likes_ind:hover {
+  background-color: #c65959;
+}
+
 a.reply_ind {
   background-color: #1D93E6;
 }
 
+a.reply_ind:hover {
+  background-color: #62b4ee;
+}
+
 a.reply_forum_ind {
   background-color: #CE5209;
+}
+
+a.reply_forum_ind:hover {
+  background-color: #b64808;
 }
 
 .topbar .upbar .my_notif {
@@ -353,6 +365,12 @@ a.reply_forum_ind {
 .upbar_likes-tooltip {
   display: inline-block;
   margin-right: 0px;
+}
+
+.upbar_likes-tooltip a {
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /*--------------------Строка навигации------------------- */

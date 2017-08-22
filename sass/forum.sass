@@ -235,10 +235,16 @@ input
 a
   &.likes_ind
     background-color: #9c3636
+    &:hover
+      background-color: lighten(#9c3636, 15%)
   &.reply_ind
     background-color: #1D93E6
+    &:hover
+      background-color: lighten(#1D93E6, 15%)
   &.reply_forum_ind
     background-color: #CE5209
+    &:hover
+      background-color: darken(#CE5209, 5%)
 
 .topbar .upbar .my_notif
   padding: 2px 4px
@@ -254,6 +260,8 @@ a
   &-tooltip
     display: inline-block
     margin-right: 0px
+    a
+      transition: all $transitionSpeed $ease
 
 /*--------------------Строка навигации-------------------
 
