@@ -1,0 +1,428 @@
+/*Сбрасывалка стилей*/
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,  
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,  
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend { 
+  vertical-align: baseline; 
+  font-family: inherit; 
+  font-weight: inherit; 
+  font-style: inherit; 
+  font-size: 100%; 
+  outline: 0; 
+  padding: 0; 
+  margin: 0; 
+  border: 0; 
+  } 
+/* remember to define focus styles! */ 
+:focus { 
+  outline: 0; 
+  } 
+body { 
+  background: white; 
+  line-height: 1; 
+  color: black; 
+  } 
+ol, ul { 
+  list-style: none; 
+  } 
+/* tables still need cellspacing="0" in the markup */ 
+table { 
+  border-collapse: separate; 
+  border-spacing: 0; 
+  } 
+caption, th, td { 
+  font-weight: normal; 
+  text-align: left; 
+  } 
+/* remove possible quote marks (") from <q> & <blockquote> */ 
+blockquote:before, blockquote:after, q:before, q:after { 
+  content: ""; 
+  } 
+blockquote, q { 
+  quotes: "" ""; 
+  } 
+/*Конец сбрасывалки стилей*/
+
+.upbar1 h5 a{
+	color: #d4d4d4;
+}
+
+
+
+.topbar-block-l {
+	display: inline;
+	float: left;
+	margin: 3px 10px;
+}
+.topbar-block-r {
+	display: inline;
+	float: right;
+	font-size: small;
+	margin: 3px 10px;
+}
+
+.forum_content {
+	margin: 40px 50px 0 20px; 
+	background-color: white;
+	border-radius: 2px;
+}
+
+.stock_forum {
+	background-color: #2d2d2d;
+	font-family: 'Open Sans', sans-serif;
+	display:block;
+	height:100%;
+}
+
+.cmt_container {
+	margin: 0 10px 20px 50px;
+	font-size:14px;
+	line-height:19px;
+}
+
+.avtr_box {
+	float: left;
+	margin-left: -50px;
+	width: 50px;
+	height: 50px;
+}
+
+
+.forum_cmts {
+	padding-top:20px;
+	margin: 0 10px;
+}
+
+.cmt_body {
+	margin: 0 10px;
+}
+
+.company_bar {
+	display: none;
+}
+
+.company_bar h2{
+	color: #fff;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+}
+
+
+.stock_forum  h1 {
+	font-family: 'Roboto', sans-serif;
+	color: #000000;
+	font-weight: normal;
+}
+
+.stock_forum a {
+	text-decoration:none;
+	color: #77b3ff;
+}
+
+.stock_forum a:hover {
+	color: white;
+}
+
+.links-to-forum {
+	margin-top:20px;
+	color: #fff;
+}
+
+.links-to-forum a:hover{
+	color:white;;
+}
+
+.links-to-forum a {
+	color: #99d4ff;
+}
+
+.a_name {
+	font-weight:bold;
+	color:#77b3ff;
+}
+
+.a_time {
+	color: #767676;
+	margin-left: 20px;
+}
+
+
+
+.cmt_footer {
+	margin-top: 7px;
+}
+
+.cmt_footer b {
+	color: #767676;
+	font-weight: normal;
+}
+
+.alphabet-line {
+	margin-top:10px;
+}
+
+.alphabet-line  a{
+	color: #8c8c8c;
+	letter-spacing:4px;
+}
+
+.search_bar {
+	color: #8c8c8c;
+	padding: 5px 10px;
+	height: 40px;
+
+}
+
+.ads_bar {
+    flex: 0 1 300px;
+    margin: 10px;
+    padding: 0;
+}
+
+.content_wrapper {
+	flex: 1 1 560px;
+	min-width:560px;
+}
+
+.comment_writer {
+	padding: 0 0 20px;
+	border-bottom: 1px solid #e2e2e2;
+	overflow: hidden;
+	position: relative;
+}
+
+.write_comment_box {
+	height: 40px;
+	border: 1px solid #e2e2e2;
+	padding: 0 0 50px;
+}
+
+.comment-notif {
+	margin: 20px 0 0 10px;
+	line-height: 30px;
+	color: #a9a9a9;
+}
+
+.right_scroller {
+	width: 46px;
+	height: 100px;
+	border-radius: 5px;
+	position: fixed;
+	right: 2px;
+	top: calc(100% / 2 - 46px);	
+}
+
+.scroll_up {
+	border: 1px solid #525252;
+	border-radius: 10px 10px 0 0; 
+	width: 44px;
+	height: 45px;
+	background: linear-gradient(to right,#a9a9a9, #525252)
+}
+
+.scroll_down {
+	border: 1px solid #525252;
+	border-radius: 0 0 10px 10px;
+	width: 44px;
+	height: 45px;
+	background: linear-gradient(to right,#a9a9a9, #525252)
+}
+
+.scroll_up a {
+	display: block;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+	height:100%;
+}
+
+.scroll_down a {
+	display: block;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+	height:100%;
+}
+
+.right_scroller a {
+	color: white;
+	font-size: 30px;
+}
+
+.right_scroller a:hover {
+	background-color: #525252;
+}
+
+.right_scroller a:active {
+	background-color: white;	
+}
+.chart_wrapper {
+	display:flex;
+	flex-flow: row wrap;
+	width:100%;
+}
+
+.chart_wrapper1 {
+	flex: 3 1 Auto;
+	background-color: yellow;
+	height:400px;
+
+}
+
+.chart_wrapper2 {
+	flex: 1 1 400px;
+	background-color: white;
+/*	height:400px;*/
+	}
+
+
+	
+	
+.fundam_table {
+	margin-left:10px;
+	border-spacing:5px;
+}
+
+.flex-div {
+	flex:1;
+}
+
+.fundam_table{
+	font-size:12px;
+}
+
+.fundam_table a{
+	font-size:12px;
+	color:#222;
+	text-decoration:underline;
+	display: inline;
+}
+
+
+.fundam_table a:hover {
+	color: red;
+}
+
+
+#down {
+	color: red;
+}
+
+.chart_wrapper2 h2{
+	margin:10px;
+}
+
+/*Календарь*/
+.last_stocks_events li
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	font-size: 12px;
+}
+
+.last_stocks_events li:nth-child(2n+1)
+{
+	background-color: #f1f1f1;
+}
+
+.last_stocks_events a, .last_stocks_events span
+{
+	margin-left: 0.6em;
+}
+
+.last_stocks_events li a:first-child, .last_stocks_events li span:first-child
+{
+	font-size: 12px;
+}
+
+
+.last_stocks_events li strong:first-child
+{
+	color: #1F1F1F;
+}
+
+.last_stocks_events li > span:first-child
+{
+	width: 3em;
+	display: inline-block;
+}
+
+
+.last_stocks_events li.more
+{
+	text-align: right;
+}
+
+.last_stocks_events .controls
+{
+	float: right;
+}
+
+.news-wrapper {
+	background-color:#2d2d2d;
+}
+
+.fooooooter {
+	height:300px;
+	background-color:#2d2d2d;
+}
+
+.news-wrapper .news-head a{
+	color:white;
+}
+
+.news-head a:hover{
+	color:red;
+}
+
+.news-wrapper a{
+	color:#99d4ff;
+	font-weight:bold;
+	line-height:25px;
+}
+
+.company_description{
+	margin: 0 10px 20px 10px;
+	font-size: 14px;
+	line-height:19px;
+}
+
+.company_description h2 {
+	font-size:25px;
+	margin: 10px 0;
+}
+
+.logo_place {
+	margin: 20px 0;
+}
+.forum_paginator {
+	margin-left:10px;
+	text-align: center;
+}
+
+.forum_paginator ul li {
+	list-style:none;
+	display: inline; 
+    margin-right: 5px;
+	
+}
+
+.forum_paginator a {
+	color: #0070ff;
+}
+
+.forum_paginator a:hover {
+	color: #99d4ff;
+}
+
+.yandex_wrapper {
+	text-align: center;
+}
+
+.content_plus_ad {
+	display:flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+

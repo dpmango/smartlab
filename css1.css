@@ -1,0 +1,198 @@
+* {box-sizing: border-box;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Верхнее меню форумов*/
+
+.spectag_menu_button
+{
+	border-radius: 7px 7px 0 0;
+	font-size: 0.7;
+	background-color: white;
+}
+
+.spectag_menu {
+	font-family: Tahoma;
+	font-size: 1em;
+	text-decoration: none;
+}
+.spectag_menu:link  { color: #616161; }
+.spectag_menu:visited  { color: #616161; }
+.spectag_menu:hover  { background-color: #f90202; }
+.spectag_menu:active  { color: #f90202; }
+
+/*Левое меню*/
+.left_bar {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+	color: #a2a2a2;
+	font-size: 14px;
+}
+
+.allblog {
+	white-space: nowrap; 
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/*Лента блогов на главной*/
+.main_bar {
+		float: left;
+		width: 49.5%;
+		padding-top: 10px;
+		padding-left:10px;
+		background-color: #f1f1f1;
+		border-radius: 7px;
+		min-width: 570px;
+}
+
+a.post_header {
+	text-decoration: none;
+}
+
+
+
+/* Формат таблички и формат текста под заголовком поста*/
+.podpisi {
+	font-size: 14px;
+	font-family: Tahoma;
+	font-size: 13px;
+	color: #616161;
+	margin: 0;
+	padding: 0;
+	}
+	
+/*Менюшка под каждым постом*/
+.underpost {
+	border-radius:	15px;
+	border: 1px solid #e0e0e0;
+	margin: 10px 0;
+}
+
+.underpost2 {
+	padding: 0px 0 10px 0px;
+	height: 18px;
+	margin: 3px;
+}
+
+.underpost_items {
+	list-style: none;
+	
+}
+
+.underpost_left {
+	float:left;
+	margin-left: 15px;
+	display:block;
+}
+.underpost_right {
+	float:right;
+	margin-right: 15px;
+	display:block;
+}
+
+
+.underpost_right b {
+	font-size: 13px;
+	color: green;
+}
+
+.underpost_like {
+	color: green;
+}
+
+/*Аватар автора*/
+img.main_avatar {
+	float: left;
+	margin: 5px 15px 5px 5px;
+	border: 1px solid #e0e0e0;
+	background-color: #f4f4f4;
+	padding: 0px;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.55);
+}
+
+/*Правый сайдбар*/
+.right_bar p {
+		color: #a2a2a2;
+		font-size: 14px;
+}
+
+.right_bar .podpisi {
+		color: #a2a2a2;
+}
+
+.right_bar {
+/*	background-color: #dcdcdc;*/
+	font-family: Tahoma;
+	color: #a2a2a2;
+	float: right;
+	width: 24.7%;
+/*	border: 1px solid #e0e0e0;*/
+	border-radius: 5px;
+/*	border-top: 10px solid #e0e0e0;*/
+	padding: 0 10px;
+	margin-right: 0px;	
+	margin-right: 5px;
+	line-height: 100%;
+}
+
+.rightbar_heads {
+	display: block;
+	height: 30px;
+	padding-top: 4px;	
+	/*border: 1px outset;
+	border-radius: 4px;*/
+}
+
+
+.rightbar_btms {
+	display: block;
+	height: 20px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+
+.right_bar .underpost_left {
+	margin: 0;
+	padding-right: 7px;
+}
+
+
+.rightbar_heads b {
+	padding-left: 0;
+	font-weight: bold;
+	font-size: 15px;
+	}
+
+.post_like
+{
+	text-align: right;
+}
+
+/*футер*/
+footer {
+	margin-top: 15px;
+	font-size: .8em;	
+	padding: 10px 0px 30px 0px;
+	background-color: black;
+	color: rgb(204,204,204);
+	clear: both;
+}
+
+

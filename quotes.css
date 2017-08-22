@@ -1,0 +1,105 @@
+/*Сбрасывалка стилей*/
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,  
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,  
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend { 
+  vertical-align: baseline; 
+  font-family: inherit; 
+  font-weight: inherit; 
+  font-style: inherit; 
+  font-size: 100%; 
+  outline: 0; 
+  padding: 0; 
+  margin: 0; 
+  border: 0; 
+  } 
+/* remember to define focus styles! */ 
+:focus { 
+  outline: 0; 
+  } 
+body { 
+  background: white; 
+  line-height: 1; 
+  color: black; 
+  } 
+ol, ul { 
+  list-style: none; 
+  } 
+/* tables still need cellspacing="0" in the markup */ 
+table { 
+  border-collapse: separate; 
+  border-spacing: 0; 
+  } 
+caption, th, td { 
+  font-weight: normal; 
+  text-align: left; 
+  } 
+/* remove possible quote marks (") from <q> & <blockquote> */ 
+blockquote:before, blockquote:after, q:before, q:after { 
+  content: ""; 
+  } 
+blockquote, q { 
+  quotes: "" ""; 
+  } 
+/*Конец сбрасывалки стилей*/
+* {box-sizing: border-box;}
+
+.q-table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	width:100%;
+	height:100%;
+	vertical-align:middle;
+	margin:auto;
+	font-family: Tahoma;
+}
+
+
+.tr-quote {
+	height: 20%;
+}
+
+.td-quote {
+	text-align:center;
+	vertical-align:middle;
+	border: 0;
+	border-radius: 5px;
+	margin:5px;
+	color: white;
+	width:25%;
+}
+
+#td-name{
+	font-weight:bold;
+	text-align:left;
+	margin-left: 10px;
+	height:60%;
+	font-size: 14px;
+}
+
+#td-price {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	font-size: 11px;
+}
+
+#td-change {
+	display: inline;
+	float:right;
+	margin-right: 10px;
+	font-weight:bold;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+#color-up3 {	background: linear-gradient(to right, #003801, #006f02);}
+#color-up2 {	background: linear-gradient(to right, #007902, #00cc03);}
+#color-up1 {	background: linear-gradient(to right, #00da04, #7cff7e);}
+#color-dn3 {	background: linear-gradient(to right, #630000, #b50000);}
+#color-dn2 {	background: linear-gradient(to right, #a00000, #ff2929);}
+#color-dn1 {	background: linear-gradient(to right, #ff2323, #ff7171);}
+
+td a {
+	display: block;
+}
