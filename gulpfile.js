@@ -1,16 +1,16 @@
 // include packages
-var gulp         = require('gulp'),
-var watch        = require('gulp-watch'),
-var sass         = require('gulp-sass'),
-var sourcemaps   = require('gulp-sourcemaps'),
-var browserSync  = require('browser-sync'),
-var postcss      = require('gulp-postcss'),
-var svginline    = require('postcss-inline-svg'),
-var sorting      = require('postcss-sorting'),
-var flexbugs     = require('postcss-flexbugs-fixes'),
-var autoprefixer = require('autoprefixer'),
-var notify       = require('gulp-notify'),
-var plumber      = require('gulp-plumber'),
+var gulp         = require('gulp');
+var watch        = require('gulp-watch');
+var sass         = require('gulp-sass');
+var sourcemaps   = require('gulp-sourcemaps');
+var browserSync  = require('browser-sync');
+var postcss      = require('gulp-postcss');
+var svginline    = require('postcss-inline-svg');
+var sorting      = require('postcss-sorting');
+var flexbugs     = require('postcss-flexbugs-fixes');
+var autoprefixer = require('autoprefixer');
+var notify       = require('gulp-notify');
+var plumber      = require('gulp-plumber');
 var reload       = browserSync.reload;
 
 // settings
@@ -66,7 +66,7 @@ gulp.task('styles', function () {
     .pipe(plumber({
       errorHandler: errorHandler
     }))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css'))
     .pipe(reload({stream: true}));
 });

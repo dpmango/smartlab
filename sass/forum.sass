@@ -1,0 +1,846 @@
+/*Сбрасывалка стилей
+
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, dl, dt, dd, ol, ul, li, fieldset, form, label, legend
+  vertical-align: baseline
+  font-family: inherit
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  outline: 0
+  padding: 0
+  margin: 0
+  border: 0
+
+/* remember to define focus styles!
+
+\:focus
+  outline: 0
+
+body
+  line-height: 1
+  color: black
+
+ol, ul
+  list-style: none
+
+/* tables still need cellspacing="0" in the markup
+
+table
+  border-collapse: separate
+  border-spacing: 0
+
+caption, th, td
+  font-weight: normal
+  text-align: left
+
+/* remove possible quote marks (") from <q> & <blockquote>
+
+blockquote
+  &:before, &:after
+    content: ""
+
+q
+  &:before, &:after
+    content: ""
+
+blockquote, q
+  quotes: "" ""
+
+/*Конец сбрасывалки стилей
+
+/*--------------------Верхнее меню-------------------
+/*--------------------Эту часть можно засунуть в отдельный css, т.к. она самая общая-------------------
+
+.topbar
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 40px
+  font-size: 12px
+
+.upbar
+  background-image: linear-gradient(to bottom, #131313, #2d2d2d)
+  height: 40px
+
+.upbar_menu
+  float: left
+  width: 50px
+  height: 100%
+  position: absolute
+  left: 0px
+  top: 0px
+  text-align: center
+  z-index: 101
+  a
+    display: block
+    height: 100%
+    width: 50px
+  &:hover
+    background-image: linear-gradient(to bottom, #2d2d2d, #868686)
+
+.upbar_logo h5 a
+  color: #d4d4d4
+  font-size: 25px
+  font-family: 'Tahoma', sans-serif
+  font-weight: bold
+  &:hover
+    color: white
+  &:active
+    font-size: 24px
+
+.menu_img
+  padding: 14px 0 0 0
+
+@media screen and (max-width: 800px)
+  .upbar_logo
+    display: none
+
+@media screen and (min-width: 801px)
+  .upbar_logo
+    float: left
+    display: inline
+    width: 190px
+    position: absolute
+    padding: 9px 10px 0 50px
+    margin-left: 5px
+    z-index: 100
+
+.upbar_search
+  max-width: 600px
+  width: 50%
+  float: left
+  display: flex
+
+@media screen and (max-width: 720px)
+  .upbar_search
+    position: relative
+    left: 50px
+    top: -2px
+
+@media screen and (min-width: 721px)
+  .upbar_search
+    position: relative
+    left: 250px
+    top: -2px
+
+.upbar input
+  width: 100%
+  padding: 6px 20px
+  margin: 8px 0
+  display: inline-block
+  border: 2px solid #717171
+  border-radius: 8px
+  box-sizing: border-box
+  background-color: #2d2d2d
+  font-family: 'Roboto',Tahoma
+  color: #ffffff
+  box-shadow: 2px 2px 10px rgba(250, 250, 250, 0.45)
+  /* -webkit-transition: all 200ms cubic-bezier(0.4, 0, 1, 1);
+   *-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+   *-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+   *transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  &:focus
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
+      opacity: 0
+      transition: opacity 0.3s ease
+
+input
+  &:hover
+    border: 2px solid #ffd400
+    box-shadow: 1px 1px 3px 1px rgba(52, 152, 219, 0.2) inset
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
+  &:focus
+    border: 2px solid #ffd400
+    box-shadow: 0px 0px 0px 0px rgba(52, 152, 219, 1)
+    background-color: rgba(0, 0, 0, 0.5)
+    -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1)
+    -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1)
+    -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1)
+    transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1)
+
+.upbar input
+  &::-webkit-input-placeholder
+    color: #d4d4d4
+  &::-moz-placeholder
+    /* Firefox 19+
+    color: #d4d4d4
+  &:-ms-input-placeholder
+    color: #d4d4d4
+  &:-moz-placeholder
+    /* Firefox 18-
+    color: #d4d4d4
+
+/*Меню с алфавитным указателем
+
+.abc-link
+  color: #d4d4d4
+  display: inline-block
+  float: right
+  margin: 1em 0 18px 10px
+  .drop-menu-main .drop-down:hover
+    color: #ffd400
+    cursor: pointer
+  #abc1
+    font-size: 2em
+
+.search_q
+  display: inline-block
+  width: 100%
+
+.upbar_usermenu
+  display: block
+  float: right
+
+.my_avatar
+  width: 40px
+  height: 40px
+  display: inline-block
+  border-radius: 20px
+  margin-right: 20px
+  line-height: 50px
+  margin: 4px 0
+
+.upbar_arrow
+  background: url(images/head_arrow.png) no-repeat
+  background-position: right 0
+  margin: 23px 8px 0 7px
+  width: 8px
+  height: 4px
+  opacity: 0.45
+  display: inline-block
+  vertical-align: top
+
+.drop-down
+  display: block
+  white-space: nowrap
+  overflow: hidden
+  padding: 0 5px
+
+.upbar_usermenu .drop-down
+  &:hover
+    background-image: linear-gradient(to bottom, #2d2d2d, #868686)
+  &:active
+    background-color: #d4d4d4
+
+a
+  &.likes_ind
+    background-color: #9c3636
+  &.reply_ind
+    background-color: #1D93E6
+  &.reply_forum_ind
+    background-color: #CE5209
+
+.topbar .upbar .my_notif
+  padding: 2px 4px
+  color: #fff
+  border-radius: 5px
+
+.upbar_likes
+  float: right
+  display: inline
+  margin-right: 0px
+  margin: 18px 5px 0 0
+
+/*--------------------Строка навигации-------------------
+
+.navibar
+  height: 20px
+  padding-left: 10px
+  background-color: #2d2d2d
+  border: 5px solid #2d2d2d
+
+.stock_forum .navibar a
+  color: #d4d4d4
+  font-size: 12px
+  font-family: 'Roboto',Tahoma
+  &:hover
+    color: #fff
+
+ul.navitext li
+  display: inline
+  padding: 3px
+  color: #d4d4d4
+  font-size: 12px
+  font-family: 'Roboto',Tahoma
+
+/*--------------------правый скроллер вверх-вниз-------------------
+
+.right_scroller
+  width: 46px
+  height: 50%
+  border-radius: 5px
+  position: fixed
+  right: 2px
+  top: calc(100% / 2 - 46px)
+
+.scroll_up
+  border: 1px solid #525252
+  border-radius: 10px 10px 0 0
+  width: 44px
+  height: 45px
+  background: linear-gradient(to right, #a9a9a9, #525252)
+
+.scroll_down
+  border: 1px solid #525252
+  border-radius: 0 0 10px 10px
+  width: 44px
+  height: 45px
+  background: linear-gradient(to right, #a9a9a9, #525252)
+
+.scroll_up a
+  display: block
+  border-radius: 10px 10px 0 0
+  text-align: center
+  height: 100%
+
+.scroll_down a
+  display: block
+  border-radius: 0 0 10px 10px
+  text-align: center
+  height: 100%
+
+.stock_forum .right_scroller a
+  color: white
+  font-size: 30px
+  &:hover
+    background-color: #525252
+  &:active
+    background-color: white
+
+/*--------------Левое меню со ссылками---------------
+
+.company_bar h2
+  font-family: 'Roboto', Tahoma, sans-serif
+  color: #fff
+  font-size: 13px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.links-to-forum
+  margin-top: 20px
+  color: #fff
+  a:hover
+    color: white
+
+.company_bar .links-to-forum
+  a
+    color: #99d4ff
+  color: #d4d4d4
+
+#admin-links a
+  color: #d4d4d4
+  border-bottom: 1px dashed white
+  &:hover
+    color: #fff
+
+/*выползающее меню слева для маленьких экранов
+
+@media screen and (max-width: 1024px)
+  .company_bar
+    display: none
+  .hidden_menu
+    display: block
+    position: absolute
+    top: 40px
+    left: 0px
+    float: left
+    width: 18px
+    height: calc(100% - 60px)
+    border: 1px solid #6f6f6f
+    border-left-width: 0
+    color: #d4d4d4
+    border-radius: 0px 5px 5px 0
+    background-color: #2d2d2d
+    background-image: url("hidden.png")
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    a
+      display: block
+      height: 100%
+      &:hover
+        background-color: #4d4d4d
+        background-image: url("hidden2.png")
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+
+@media screen and (min-width: 1025px)
+  .stock_forum .company_bar a:hover
+    color: white
+  .company_bar
+    position: absolute
+    top: 50px
+    left: 0px
+    float: left
+    line-height: 25px
+    margin: 0 10px
+    color: #77b3ff
+    font-family: 'Roboto', Tahoma, sans-serif
+    font-size: 12px
+    width: 155px
+  .hidden_menu
+    display: none
+
+/*--------------содержимое от хедера до футера--------------
+
+@media screen and (min-width: 1025px)
+  .forum_content
+    margin: 40px 50px 0 180px
+    background-color: white
+    border-radius: 2px
+
+@media screen and (max-width: 1024px)
+  .forum_content
+    margin: 40px 50px 0 20px
+    background-color: white
+    border-radius: 2px
+
+.stock_forum
+  background-color: #2d2d2d
+  font-family: 'Open Sans', Verdana, sans-serif
+  display: block
+  height: 100%
+  min-width: 400px
+  a
+    text-decoration: none
+    color: #77b3ff
+    &:hover
+      color: #c7c7c7
+
+/*-----------------График, фундаментал и календарь------------------
+
+.chart_wrapper
+  display: flex
+  flex-flow: row wrap
+  width: 100%
+
+.chart_wrapper1
+  flex: 3 1 Auto
+  height: 400px
+
+.chart_wrapper2
+  flex: 1 1 400px
+  background-color: white
+
+.fundam_table
+  margin: 20px 0 0 10px
+  border-spacing: 5px
+  font-size: 12px
+  a
+    font-size: 12px
+    color: #222
+    text-decoration: underline
+    &:hover
+      color: red
+
+#down
+  color: red
+
+#up
+  color: green
+
+.chart_wrapper2 h2
+  margin: 10px
+
+/*--------------Заголовок форума H1--------------
+
+.stock_forum h1
+  font-family: 'Roboto', Tahoma, sans-serif
+  color: #000000
+  font-weight: normal
+  font-size: 25px
+  margin: 15px 0 0 10px
+  text-align: center
+
+/*--------------Пагинатор--------------
+
+.forum_paginator
+  margin: 20px 0 20px 15px
+  text-align: center
+  ul li
+    list-style: none
+    display: inline
+    margin-right: 5px
+  a
+    color: #77b3ff
+    &:hover
+      color: #99d4ff
+
+/*--------------Блок комментариев и блок рекламы--------------
+
+.ads_bar
+  flex: 0 1 300px
+  margin: 10px
+  padding: 0
+
+.content_wrapper
+  flex: 1 1 560px
+  margin: 10px
+  overflow: hidden
+
+/*--------------Вставлялка комментария--------------
+
+.comment_writer
+  padding: 0 0 20px
+  border-bottom: 1px solid #e2e2e2
+  overflow: hidden
+  position: relative
+
+.write_comment_box
+  border: 2px solid #e2e2e2
+  height: 50px
+  &:hover
+    border: 2px solid #77b3ff
+
+.comment-notif
+  margin: 20px 0 0 10px
+  line-height: 30px
+  color: #a9a9a9
+
+/*--------------Комментарии форума--------------
+
+/*.cmt_body .text  {font-family:Verdana;}
+
+.forum_cmts
+  padding-top: 20px
+  margin: 0 10px 0 0
+
+.cm_wrap
+  margin: 0 10px 20px 50px
+  font-size: 14px
+  line-height: 19px
+
+.avtr_box
+  float: left
+  margin-left: -50px
+  width: 50px
+  height: 50px
+
+.cmt_body
+  margin: 0 10px
+
+.a_name
+  font-weight: bold
+  color: #77b3ff
+
+.a_time
+  color: #767676
+  margin-left: 20px
+
+.cm_ftr
+  margin-top: 7px
+  b
+    color: #767676
+    font-weight: normal
+
+/*---------------------------Факторы роста и падения-----------------------------
+
+.list-reasons
+  list-style-image: url('up.gif')
+  padding: 5px
+
+.reasons li
+  margin: 10px 0
+
+.list-reasons2
+  list-style-image: url('down.gif')
+  padding: 5px
+
+.reasons
+  display: flex
+  flex-flow: row wrap
+
+.reasons-up
+  flex: 1
+  min-height: 100px
+  border: 10px solid #d4d4d4
+  padding-left: 25px
+  margin-right: 5px
+
+.reasons-down
+  flex: 1
+  min-height: 100px
+  border: 10px solid #909090
+  padding-left: 25px
+  margin-right: 5px
+
+.add-factor
+  text-align: center
+  height: 100%
+  margin-bottom: 20px
+
+/*----------------------------Футер с новостями----------------------------
+
+.news-wrapper
+  background-color: #2d2d2d
+
+.fooooooter
+  height: 300px
+  background-color: #2d2d2d
+
+.news-wrapper .news-head a
+  color: white
+
+.news-head a:hover
+  color: red
+
+.news-wrapper a
+  color: #99d4ff
+  font-weight: bold
+  line-height: 25px
+
+.company_description
+  margin: 0 10px 20px 10px
+  font-size: 14px
+  line-height: 19px
+
+.logo_place
+  margin: 20px 0
+
+@media screen and (max-width: 1024px)
+  .yandex_wrapper
+    display: none
+
+.content_plus_ad
+  display: flex
+  flex-flow: row wrap
+  width: 100%
+
+/*Формат меню под комментарием
+
+.reply
+  display: inline-block
+  vertical-align: top
+
+#rp2
+  margin-left: 15px
+  margin-left: 15px
+
+a.reply
+  color: #555555
+  &:hover
+    color: #989898
+
+.th
+  display: inline-block
+  width: 16px
+  height: 24px
+  margin-left: 15px
+
+#th-up
+  background: url(thumbs3.gif) no-repeat scroll 0px 0px
+
+#th-dn
+  margin-left: 5px
+  background: url(thumbs3.gif) no-repeat scroll -15px 0px
+
+#th-up:hover
+  background: url(thumbs3.gif) no-repeat scroll -30px 0px
+
+#th-dn:hover
+  background: url(thumbs3.gif) no-repeat scroll -45px 0px
+
+/*Если нажаты кнопки лайка или дизлайка
+
+#th-up-p
+  background: url(thumbs3.gif) no-repeat scroll -30px 0px
+
+#th-dn-p
+  margin-left: 5px
+  background: url(thumbs3.gif) no-repeat scroll -45px 0px
+
+.cm_mrk
+  font-weight: bold
+  font-size: 12px
+  display: inline-block
+  vertical-align: top
+  margin-left: 10px
+
+#red_mrk
+  color: red
+
+#grn_mrk
+  color: green
+
+#cm_opt
+  display: inline-block
+  width: 16px
+  height: 24px
+  margin-left: 15px
+  background: url(thumbs3.gif) no-repeat scroll -60px 0px
+  &:hover
+    background: url(thumbs3.gif) no-repeat scroll -75px 0px
+
+/*Конец Формат меню под комментарием
+
+/*Временные стили
+
+.temp_block
+  display: block
+  margin: 30px 0
+  width: 100%
+  clear: both
+  .temp_headers li.more
+    text-align: center
+    font-weight: bold
+    background-color: #ffffff
+    border: 1px solid transparent
+    font-size: 1.5em
+    padding: 10px 0
+    &:hover
+      border: 1px solid #99d4ff
+
+.inside_li
+  text-align: center
+  &:before
+    content: ''
+    width: 14px
+    height: 20px
+    display: inline-block
+    background: url(http://smart-lab.ru/templates/skin/smart-lab-x3/images/fire.jpg) no-repeat
+
+.temp_block .temp_headers li.cal-date
+  text-align: center
+  background-color: #ffffff
+  font-weight: bold
+  padding: 10px 0
+
+.temp_headers
+  a
+    margin-left: 1em
+    color: black
+  li
+    &:last-child a
+      margin: 0px
+    padding: 10px 70px 10px 0
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+.last_link
+  margin: 0px
+  padding: 0px
+
+/*.temp_headers li:hover{border: 3px solid #6B6B6B;}
+
+.temp_headers li
+  i
+    font-style: normal
+    font-weight: bold
+  b
+    font-weight: normal
+    float: right
+    margin-right: -30px
+    clear: both
+    display: inline-block
+  u
+    text-decoration: none
+    color: green
+
+.temp_micex_info
+  i
+    font-style: normal
+    font-size: 1.5em
+  text-align: center
+
+h2
+  font-size: 1.5em
+  text-align: center
+
+.temp_headers li:nth-child(even)
+  background-color: #f3f3f3
+
+.alphabet a
+  color: #4a4a4a
+  font-size: 1.5em
+  margin-left: 5px
+
+#indexMMVBChanges
+  width: 50%
+  float: left
+
+#indexStocksChanges
+  width: 50%
+  float: right
+
+/*Выпадающее юзер-меню
+
+.drop-down
+  width: auto
+  cursor: pointer
+
+.drop-menu-main a, .drop-down, .drop-menu-main-sub .title
+  text-decoration: none
+  color: #ffffff
+  padding: 0 10px 0 0
+
+.abc-link .drop-menu-main .drop-down
+  padding: 0px
+
+.drop-menu-main
+  float: left
+
+.drop-menu-main-sub
+  display: none
+  position: absolute
+  background: #2d2d2d
+  border-radius: 6px
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45)
+  z-index: 100
+  width: auto
+  padding: 5px 0 5px
+  margin: 10px 0 0 -70px
+  border: 1px solid #2d2d2d
+  font-size: 12px
+  .alphabet
+    position: absolute
+    display: inline-block
+    width: 190px
+    background: #2d2d2d
+    margin: 0px
+    border: 1px solid #2d2d2d
+    margin: 10px 0 0 -90px
+    border-radius: 6px
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45)
+    padding: 10px
+    a
+      left: 100px
+      display: inline-block
+      width: 30px
+      float: left
+      text-align: center
+  a
+    color: #d4d4d4
+    display: block
+    padding: 6px 12px
+    cursor: pointer
+    text-decoration: none
+    &:hover
+      background: #CE5209
+      color: #FFFFFF
+      text-decoration: none
+
+.menu-line
+  display: block
+  margin: 3px 15px
+  border-bottom: 1px solid #949494
+
+.nocenter
+  margin-top: 1em
+
+.stock_forum .nocenter
+  h1
+    text-align: left
+    display: inline
+  .temp_micex_info
+    display: inline
+    margin-left: 2em
