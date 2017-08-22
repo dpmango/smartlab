@@ -1,45 +1,45 @@
 /*Сбрасывалка стилей*/
-html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,  
-del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,  
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,  
-dl, dt, dd, ol, ul, li, fieldset, form, label,legend { 
-  vertical-align: baseline; 
-  font-family: inherit; 
-  font-weight: inherit; 
-  font-style: inherit; 
-  font-size: 100%; 
-  outline: 0; 
-  padding: 0; 
-  margin: 0; 
-  border: 0; 
-  } 
-/* remember to define focus styles! */ 
-:focus { 
-  outline: 0; 
-  } 
-body { 
-  line-height: 1; 
-  color: black; 
-  } 
-ol, ul { 
-  list-style: none; 
-  } 
-/* tables still need cellspacing="0" in the markup */ 
-table { 
-  border-collapse: separate; 
-  border-spacing: 0; 
-  } 
-caption, th, td { 
-  font-weight: normal; 
-  text-align: left; 
-  } 
-/* remove possible quote marks (") from <q> & <blockquote> */ 
-blockquote:before, blockquote:after, q:before, q:after { 
-  content: ""; 
-  } 
-blockquote, q { 
-  quotes: "" ""; 
-  } 
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+dl, dt, dd, ol, ul, li, fieldset, form, label,legend {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  }
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+  }
+body {
+  line-height: 1;
+  color: black;
+  }
+ol, ul {
+  list-style: none;
+  }
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  }
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+  }
+/* remove possible quote marks (") from <q> & <blockquote> */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  }
+blockquote, q {
+  quotes: "" "";
+  }
 /*Конец сбрасывалки стилей*/
 
 
@@ -55,7 +55,7 @@ blockquote, q {
 	background-image: linear-gradient(to bottom, #131313, #2d2d2d);
 	height: 40px;
 	}
-	
+
 .upbar_menu {
 	float: left;
 	width: 50px;
@@ -91,7 +91,7 @@ blockquote, q {
 		float: left;
 		display: inline;
 		width: 190px;
-		position: absolute;	
+		position: absolute;
 		padding: 9px 10px 0 50px;
 		margin-left: 5px;
 		z-index:100;
@@ -108,8 +108,8 @@ blockquote, q {
 @media screen and (max-width: 720px) {
 	.upbar_search { position: relative;left:50px;top:-2px;}
 }
-	
-	
+
+
 @media screen and (min-width: 721px) {
 	.upbar_search {	position: relative;left:250px;top:-2px;}
 }
@@ -216,12 +216,12 @@ transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .drop-down {
-	display:block; 
+	display:block;
 	white-space:nowrap;
 	overflow:hidden;
 	padding:0 5px;
 }
-	
+
 .upbar_usermenu .drop-down:hover {background-image: linear-gradient(to bottom, #2d2d2d, #868686);}
 .upbar_usermenu .drop-down:active {background-color:#d4d4d4;}
 
@@ -276,12 +276,12 @@ ul.navitext li{
 	border-radius: 5px;
 	position: fixed;
 	right: 2px;
-	top: calc(100% / 2 - 46px);	
+	top: calc(100% / 2 - 46px);
 }
 
 .scroll_up {
 	border: 1px solid #525252;
-	border-radius: 10px 10px 0 0; 
+	border-radius: 10px 10px 0 0;
 	width: 44px;
 	height: 45px;
 	background: linear-gradient(to right,#a9a9a9, #525252)
@@ -323,7 +323,7 @@ ul.navitext li{
 	font-size: 13px;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;	
+	text-overflow: ellipsis;
 }
 
 .links-to-forum { margin-top:20px; color: #fff; }
@@ -340,7 +340,7 @@ ul.navitext li{
 	.company_bar {
 		display:none;
 	}
-	
+
 	.hidden_menu {
 		display: block;
 		position: absolute;
@@ -371,7 +371,7 @@ ul.navitext li{
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-	}	
+	}
 }
 
 
@@ -400,7 +400,7 @@ ul.navitext li{
 
 @media screen and (min-width: 1025px) {
 	.forum_content {
-		margin: 40px 50px 0 180px; 
+		margin: 40px 50px 0 180px;
 		background-color: white;
 		border-radius: 2px;
 	}
@@ -408,10 +408,10 @@ ul.navitext li{
 
 @media screen and (max-width: 1024px) {
 	.forum_content {
-		margin: 40px 50px 0 20px; 
+		margin: 40px 50px 0 20px;
 		background-color: white;
 		border-radius: 2px;
-	}	
+	}
 }
 
 .stock_forum {
@@ -443,7 +443,7 @@ ul.navitext li{
 	flex: 1 1 400px;
 	background-color: white;
 }
-	
+
 .fundam_table {
 	margin: 20px 0 0 10px;
 	border-spacing:5px;
@@ -479,7 +479,7 @@ ul.navitext li{
 
 .forum_paginator ul li {
 	list-style:none;
-	display: inline; 
+	display: inline;
     margin-right: 5px;
 }
 
@@ -748,7 +748,7 @@ a.reply:hover {
 }
 
 
-.temp_headers li {   
+.temp_headers li {
     padding: 10px 70px 10px 0;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -831,7 +831,7 @@ h2 {
 
 .abc-link .drop-menu-main .drop-down  {
     padding: 0px;
-    
+
 }
 
 .drop-menu-main {
@@ -889,7 +889,7 @@ h2 {
 
 .menu-line {
     display: block;
-    margin: 3px 15px; 
+    margin: 3px 15px;
     border-bottom: 1px solid #949494;
 }
 
