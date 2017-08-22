@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   // prev functionaloty
   function hideallDropdowns() {
-    $(".dropped .drop-menu-main-sub").hide();
+    $(".dropped .drop-menu-main-sub").removeClass('showing');
     $(".dropped").removeClass('dropped');
     $(".dropped .drop-menu-main-sub .title").unbind("click");
     $(".dropped .drop-menu-main-sub .title").unbind("click");
@@ -26,7 +26,7 @@ $(document).ready(function(){
         })
         .html($(el).html());
 
-    el_li.find('.drop-menu-main-sub').show();
+    el_li.find('.drop-menu-main-sub').addClass('showing');
   }
 
   $(".drop-down").click(function(){

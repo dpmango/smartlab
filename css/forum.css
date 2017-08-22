@@ -292,6 +292,11 @@ input:focus {
   opacity: 0.45;
   display: inline-block;
   vertical-align: top;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
 .drop-down {
@@ -1107,6 +1112,16 @@ h2 {
   padding: 0 10px 0 0;
 }
 
+.upbar_usermenu .drop-down {
+  padding-left: 10px;
+}
+
+.upbar_usermenu .drop-menu-main.dropped .upbar_arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .abc-link .drop-menu-main .drop-down {
   padding: 0px;
 }
@@ -1116,7 +1131,6 @@ h2 {
 }
 
 .drop-menu-main-sub {
-  display: none;
   position: absolute;
   background: #2d2d2d;
   -webkit-border-radius: 6px;
@@ -1129,6 +1143,22 @@ h2 {
   margin: 10px 0 0 -70px;
   border: 1px solid #2d2d2d;
   font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translate3d(0, 15px, 0);
+          transform: translate3d(0, 15px, 0);
+  -webkit-transition: opacity .15s ease, -webkit-transform .2s ease-out;
+  transition: opacity .15s ease, -webkit-transform .2s ease-out;
+  -o-transition: transform .2s ease-out, opacity .15s ease;
+  transition: transform .2s ease-out, opacity .15s ease;
+  transition: transform .2s ease-out, opacity .15s ease, -webkit-transform .2s ease-out;
+}
+
+.drop-menu-main-sub.showing {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  pointer-events: all;
 }
 
 .drop-menu-main-sub .alphabet {

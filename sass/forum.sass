@@ -217,6 +217,7 @@ input
   opacity: 0.45
   display: inline-block
   vertical-align: top
+  transition: transform $transitionSpeed $ease
 
 .drop-down
   display: block
@@ -798,6 +799,13 @@ h2
   color: #ffffff
   padding: 0 10px 0 0
 
+.upbar_usermenu
+  .drop-down
+    padding-left: 10px
+  .drop-menu-main.dropped
+    .upbar_arrow
+      transform: rotate(180deg)
+
 .abc-link .drop-menu-main .drop-down
   padding: 0px
 
@@ -805,7 +813,6 @@ h2
   float: left
 
 .drop-menu-main-sub
-  display: none
   position: absolute
   background: #2d2d2d
   border-radius: 6px
@@ -816,6 +823,15 @@ h2
   margin: 10px 0 0 -70px
   border: 1px solid #2d2d2d
   font-size: 12px
+  opacity: 0
+  pointer-events: none
+  transform: translate3d(0,15px,0)
+  transition: transform .2s ease-out, opacity .15s ease
+  &.showing
+    opacity: 1
+    transform: translate3d(0,0,0)
+    pointer-events: all
+
   .alphabet
     position: absolute
     display: inline-block
