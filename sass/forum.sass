@@ -276,47 +276,42 @@ ul.navitext li
 /*--------------------правый скроллер вверх-вниз-------------------
 
 .right_scroller
-  width: 46px
-  height: 50%
-  border-radius: 5px
+  font-size: 0
   position: fixed
-  right: 2px
-  top: calc(100% / 2 - 46px)
+  right: 30px
+  bottom: 10px
+  z-index: 100
+
 
 .scroll_up
-  border: 1px solid #525252
-  border-radius: 10px 10px 0 0
-  width: 44px
-  height: 45px
-  background: linear-gradient(to right, #a9a9a9, #525252)
+  border-radius: 10px 0px 0 10px
+  background: linear-gradient(to top, #a9a9a9, #525252)
 
 .scroll_down
+  border-radius: 0 10px 10px 0px
+  margin-left: -1px
+  background: linear-gradient(to bottom, #a9a9a9, #525252)
+  a
+    transform: rotate(180deg)
+
+.scroll_up, .scroll_down
+  overflow: hidden
+  display: inline-block
   border: 1px solid #525252
-  border-radius: 0 0 10px 10px
-  width: 44px
-  height: 45px
-  background: linear-gradient(to right, #a9a9a9, #525252)
-
-.scroll_up a
-  display: block
-  border-radius: 10px 10px 0 0
-  text-align: center
-  height: 100%
-
-.scroll_down a
-  display: block
-  border-radius: 0 0 10px 10px
-  text-align: center
-  height: 100%
-
-.stock_forum .right_scroller a
-  color: white
-  font-size: 30px
-  transition: all $transitionSpeed $ease
-  &:hover
-    background-color: #525252
-  &:active
-    background-color: white
+  width: 40px
+  height: 40px
+  a
+    display: block
+    height: 100%
+    text-align: center
+    vertical-align: middle
+    background: transparent svg-load('../img/svg/up-arrow.svg', fill=#fff) no-repeat center
+    background-size: 50%
+    transition: all $transitionSpeed $ease
+    &:hover
+      background-color: #525252
+    &:active
+      background-color: white
 
 /*--------------Левое меню со ссылками---------------
 
@@ -404,13 +399,13 @@ ul.navitext li
 
 @media screen and (min-width: 1025px)
   .forum_content
-    margin: 40px 50px 0 180px
+    margin: 40px 20px 0 180px
     background-color: white
     border-radius: 2px
 
 @media screen and (max-width: 1024px)
   .forum_content
-    margin: 40px 50px 0 20px
+    margin: 40px 20px 0 20px
     background-color: white
     border-radius: 2px
 

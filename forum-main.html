@@ -14,11 +14,11 @@
   <body class="stock_forum">
     <div class="right_scroller">
       <div class="scroll_up">
-        <a href="#top">↑</a>
+        <a href="#top"></a>
       </div>
 
       <div class="scroll_down">
-        <a href="#bottom">↓</a>
+        <a href="#bottom"></a>
       </div>
     </div>
 
@@ -827,36 +827,6 @@
     </header>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript">
     </script>
-    <script type="text/javascript">
-
-                $(document).ready(function () {
-
-                function hideallDropdowns() {
-                    $(".dropped .drop-menu-main-sub").hide();
-                    $(".dropped").removeClass('dropped');
-                    $(".dropped .drop-menu-main-sub .title").unbind("click");
-                }
-
-                function showDropdown(el) {
-                    var el_li = $(el).parent().addClass('dropped');
-                    el_li
-                        .find('.title')
-                        .click(function () {
-                            hideallDropdowns();
-                        })
-                        .html($(el).html());
-
-                    el_li.find('.drop-menu-main-sub').show();
-                }
-
-                $(".drop-down").click(function(){
-                    showDropdown(this);
-                });
-
-                $(document).mouseup(function () {
-                    hideallDropdowns();
-                });
-            });
-    </script>
+    <script src="/js/main.js" type="text/javascript"></script>
   </body>
 </html>

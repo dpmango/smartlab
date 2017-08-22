@@ -50,6 +50,7 @@ gulp.task('webserver', function () {
     files: [
       './*.html',
       './css/*.css',
+      './js/**/*.js',
       './img/**/*',
       './images/**/*'
     ],

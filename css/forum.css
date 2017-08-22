@@ -375,69 +375,64 @@ ul.navitext li {
 
 /*--------------------правый скроллер вверх-вниз------------------- */
 .right_scroller {
-  width: 46px;
-  height: 50%;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  font-size: 0;
   position: fixed;
-  right: 2px;
-  top: -webkit-calc(100% / 2 - 46px);
-  top: calc(100% / 2 - 46px);
+  right: 30px;
+  bottom: 10px;
+  z-index: 100;
 }
 
 .scroll_up {
-  border: 1px solid #525252;
-  -webkit-border-radius: 10px 10px 0 0;
-          border-radius: 10px 10px 0 0;
-  width: 44px;
-  height: 45px;
-  background: -webkit-gradient(linear, left top, right top, from(#a9a9a9), to(#525252));
-  background: -webkit-linear-gradient(left, #a9a9a9, #525252);
-  background: -o-linear-gradient(left, #a9a9a9, #525252);
-  background: linear-gradient(to right, #a9a9a9, #525252);
+  -webkit-border-radius: 10px 0px 0 10px;
+          border-radius: 10px 0px 0 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#a9a9a9), to(#525252));
+  background: -webkit-linear-gradient(bottom, #a9a9a9, #525252);
+  background: -o-linear-gradient(bottom, #a9a9a9, #525252);
+  background: linear-gradient(to top, #a9a9a9, #525252);
 }
 
 .scroll_down {
-  border: 1px solid #525252;
-  -webkit-border-radius: 0 0 10px 10px;
-          border-radius: 0 0 10px 10px;
-  width: 44px;
-  height: 45px;
-  background: -webkit-gradient(linear, left top, right top, from(#a9a9a9), to(#525252));
-  background: -webkit-linear-gradient(left, #a9a9a9, #525252);
-  background: -o-linear-gradient(left, #a9a9a9, #525252);
-  background: linear-gradient(to right, #a9a9a9, #525252);
-}
-
-.scroll_up a {
-  display: block;
-  -webkit-border-radius: 10px 10px 0 0;
-          border-radius: 10px 10px 0 0;
-  text-align: center;
-  height: 100%;
+  -webkit-border-radius: 0 10px 10px 0px;
+          border-radius: 0 10px 10px 0px;
+  margin-left: -1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a9a9a9), to(#525252));
+  background: -webkit-linear-gradient(top, #a9a9a9, #525252);
+  background: -o-linear-gradient(top, #a9a9a9, #525252);
+  background: linear-gradient(to bottom, #a9a9a9, #525252);
 }
 
 .scroll_down a {
-  display: block;
-  -webkit-border-radius: 0 0 10px 10px;
-          border-radius: 0 0 10px 10px;
-  text-align: center;
-  height: 100%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.stock_forum .right_scroller a {
-  color: white;
-  font-size: 30px;
+.scroll_up, .scroll_down {
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #525252;
+  width: 40px;
+  height: 40px;
+}
+
+.scroll_up a, .scroll_down a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='401.949px' height='401.949px' viewBox='0 0 401.949 401.949' style='enable-background:new 0 0 401.949 401.949;' xml:space='preserve' fill='%23fff'%3E %3Cg%3E %3Cg%3E %3Cg id='Layer_5_60_'%3E %3Cpath d='M328.508,173.212L211.214,4.948c-5.633-6.598-14.846-6.598-20.479,0L73.445,173.209 c-5.631,6.599-3.146,11.996,5.529,11.996h49.068c8.672,0,15.77,7.097,15.77,15.771l0.077,51.518v133.428l-0.021,0.292 c0.003,8.676,7.321,15.734,15.991,15.736l82.789-0.002c8.674,0,15.771-7.096,15.771-15.766l-0.279-185.207 c0-8.674,7.094-15.771,15.769-15.771h49.066C331.647,185.205,334.136,179.808,328.508,173.212z'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+  -webkit-background-size: 50% 50%;
+          background-size: 50%;
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
-.stock_forum .right_scroller a:hover {
+.scroll_up a:hover, .scroll_down a:hover {
   background-color: #525252;
 }
 
-.stock_forum .right_scroller a:active {
+.scroll_up a:active, .scroll_down a:active {
   background-color: white;
 }
 
@@ -556,7 +551,7 @@ ul.navitext li {
 /*--------------содержимое от хедера до футера-------------- */
 @media screen and (min-width: 1025px) {
   .forum_content {
-    margin: 40px 50px 0 180px;
+    margin: 40px 20px 0 180px;
     background-color: white;
     -webkit-border-radius: 2px;
             border-radius: 2px;
@@ -565,7 +560,7 @@ ul.navitext li {
 
 @media screen and (max-width: 1024px) {
   .forum_content {
-    margin: 40px 50px 0 20px;
+    margin: 40px 20px 0 20px;
     background-color: white;
     -webkit-border-radius: 2px;
             border-radius: 2px;
