@@ -246,10 +246,14 @@ a
   border-radius: 5px
 
 .upbar_likes
+  position: relative
   float: right
   display: inline
   margin-right: 0px
   margin: 18px 5px 0 0
+  &-tooltip
+    display: inline-block
+    margin-right: 0px
 
 /*--------------------Строка навигации-------------------
 
@@ -876,3 +880,107 @@ h2
   .temp_micex_info
     display: inline
     margin-left: 2em
+
+/**************  Тултип **************/
+.tooltip
+  position: absolute
+  z-index: 1070
+  display: block
+  font-style: normal
+  font-weight: normal
+  letter-spacing: normal
+  line-break: auto
+  line-height: 1.1em
+  text-align: left
+  text-align: start
+  text-decoration: none
+  text-shadow: none
+  text-transform: none
+  white-space: normal
+  word-break: normal
+  word-spacing: normal
+  word-wrap: normal
+  font-size: 12px
+  opacity: 0
+  filter: alpha(opacity = 0)
+  &.in
+    opacity: 0.9
+    filter: alpha(opacity = 90)
+  &.top
+    margin-top: -3px
+    padding: 5px 0
+  &.right
+    margin-left: 3px
+    padding: 0 5px
+  &.bottom
+    margin-top: 3px
+    padding: 5px 0
+  &.left
+    margin-left: -3px
+    padding: 0 5px
+
+.tooltip-inner
+  max-width: 350px
+  padding: 8px 12px
+  color: white
+  text-align: left
+  background-color: #2d2d2d
+  border-radius: 8px
+  text-align: center
+
+.tooltip-arrow
+  position: absolute
+  width: 0
+  height: 0
+  border-color: transparent
+  border-style: solid
+
+.tooltip
+  &.top .tooltip-arrow
+    bottom: 0
+    left: 50%
+    margin-left: -5px
+    border-width: 5px 5px 0
+    border-top-color: #2d2d2d
+  &.top-left .tooltip-arrow
+    bottom: 0
+    right: 5px
+    margin-bottom: -5px
+    border-width: 5px 5px 0
+    border-top-color: #2d2d2d
+  &.top-right .tooltip-arrow
+    bottom: 0
+    left: 5px
+    margin-bottom: -5px
+    border-width: 5px 5px 0
+    border-top-color: #2d2d2d
+  &.right .tooltip-arrow
+    top: 50%
+    left: 0
+    margin-top: -5px
+    border-width: 5px 5px 5px 0
+    border-right-color: #2d2d2d
+  &.left .tooltip-arrow
+    top: 50%
+    right: 0
+    margin-top: -5px
+    border-width: 5px 0 5px 5px
+    border-left-color: #2d2d2d
+  &.bottom .tooltip-arrow
+    top: 0
+    left: 50%
+    margin-left: -5px
+    border-width: 0 5px 5px
+    border-bottom-color: #2d2d2d
+  &.bottom-left .tooltip-arrow
+    top: 0
+    right: 5px
+    margin-top: -5px
+    border-width: 0 5px 5px
+    border-bottom-color: #2d2d2d
+  &.bottom-right .tooltip-arrow
+    top: 0
+    left: 5px
+    margin-top: -5px
+    border-width: 0 5px 5px
+    border-bottom-color: #2d2d2d

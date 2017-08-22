@@ -9,6 +9,10 @@ $(document).ready(function(){
       return false;
 	});
 
+  // tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  
+
   // prev functionaloty
   function hideallDropdowns() {
     $(".dropped .drop-menu-main-sub").removeClass('showing');
