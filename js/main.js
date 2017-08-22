@@ -1,4 +1,12 @@
 $(document).ready(function(){
+  // global variables
+
+  var _window = $(window);
+
+  // prevent default for blank links
+  $('a[href="#"]').on('click', function(e){
+    e.preventDefault();
+  });
 
   // Smoth scroll
 	$('a[href^="#top"], a[href^="#bottom"]').on('click', function() {
@@ -11,7 +19,44 @@ $(document).ready(function(){
 
   // tooltip
   $('[data-toggle="tooltip"]').tooltip();
-  
+
+  // hidden menu
+  $(".hidden_menu").on('click', function(){
+    $(this).toggleClass('active');
+    $('.company_bar').toggleClass('active');
+  });
+
+  setScrolledPos();
+
+  _window.on('scroll', function(){
+    setScrolledPos();
+  });
+
+  _window.on('resize', function(){
+    setScrolledPos();
+  });
+
+  function setScrolledPos(){
+    var scrollTop = _window.scrollTop();
+
+    if ( scrollTop > 40 && _window.width() < 1025 ){
+      $(".hidden_menu").addClass('scrolled');
+      $('.company_bar').addClass('scrolled');
+    } else {
+      $(".hidden_menu").removeClass('scrolled');
+      $('.company_bar').removeClass('scrolled');
+    }
+  }
+
+  $(document).mouseup(function (e) {
+    var container = new Array();
+    var value = $('.company_bar');
+    if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+      $(".hidden_menu").removeClass('active');
+      $('.company_bar').removeClass('active');
+    }
+  });
+
 
   // prev functionaloty
   function hideallDropdowns() {

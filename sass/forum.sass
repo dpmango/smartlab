@@ -351,62 +351,84 @@ ul.navitext li
 
 #admin-links a
   color: #d4d4d4
-  border-bottom: 1px dashed white
+  font-size: 15px
   transition: all $transitionSpeed $ease
+  span
+    font-size: 12px
+    vertical-align: 2px
+    border-bottom: 1px dashed white
+    transition: all $transitionSpeed $ease
   &:hover
     color: #fff
+    span
+      border-color: transparent
 
 /*выползающее меню слева для маленьких экранов
 
-@media screen and (max-width: 1024px)
-  .company_bar
-    display: none
-  .hidden_menu
-    display: block
-    position: absolute
-    top: 40px
-    left: 0px
-    float: left
-    width: 18px
-    height: calc(100% - 60px)
-    border: 1px solid #6f6f6f
-    border-left-width: 0
-    color: #d4d4d4
-    border-radius: 0px 5px 5px 0
-    background-color: #2d2d2d
-    background-image: url("../img/hidden.png")
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
-    a
-      display: block
-      height: 100%
-      transition: all $transitionSpeed $ease
-      &:hover
-        background-color: #4d4d4d
-        background-image: url("../img/hidden2.png")
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
+.stock_forum .company_bar a
+  transition: all $transitionSpeed $ease
+  &:hover
+    color: white
+
+.company_bar
+  position: absolute
+  top: 50px
+  left: 0px
+  float: left
+  line-height: 25px
+  margin: 0 10px
+  color: #77b3ff
+  font-family: 'Roboto', Tahoma, sans-serif
+  font-size: 12px
+  width: 155px
+  transition: all $transitionSpeed $ease
+
+.hidden_menu
+  box-sizing: border-box
+  display: block
+  position: fixed
+  top: 50px
+  left: 0px
+  float: left
+  width: 18px
+  height: calc(100% - 60px)
+  border: 1px solid #6f6f6f
+  border-left-width: 0
+  color: #d4d4d4
+  border-radius: 0px 5px 5px 0
+  background-color: #2d2d2d
+  background-image: url("../img/hidden.png")
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  cursor: pointer
+  transition: all $transitionSpeed $ease
+  &.active
+    transform: translate3d(165px,0,0)
+  &:hover, &.active
+    background-color: #4d4d4d
+    background-image: url("../img/hidden2.png")
+  &.scrolled
+    top: 0px
+    height: 100vh
 
 @media screen and (min-width: 1025px)
-  .stock_forum .company_bar a
-    transition: all $transitionSpeed $ease
-    &:hover
-      color: white
-  .company_bar
-    position: absolute
-    top: 50px
-    left: 0px
-    float: left
-    line-height: 25px
-    margin: 0 10px
-    color: #77b3ff
-    font-family: 'Roboto', Tahoma, sans-serif
-    font-size: 12px
-    width: 155px
   .hidden_menu
     display: none
+
+@media screen and (max-width: 1024px)
+  .company_bar
+    position: fixed
+    height: calc(100vh - 60px)
+    overflow-y: scroll
+    background: #2d2d2d
+    transform: translate3d(-120%,0,0)
+    &.active
+      transform: translate3d(0,0,0)
+    &.scrolled
+      top: 0px
+      height: 100vh
+
 
 /*--------------содержимое от хедера до футера--------------
 

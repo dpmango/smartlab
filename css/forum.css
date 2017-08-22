@@ -498,6 +498,15 @@ ul.navitext li {
 
 #admin-links a {
   color: #d4d4d4;
+  font-size: 15px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+#admin-links a span {
+  font-size: 12px;
+  vertical-align: 2px;
   border-bottom: 1px dashed white;
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -508,72 +517,103 @@ ul.navitext li {
   color: #fff;
 }
 
+#admin-links a:hover span {
+  border-color: transparent;
+}
+
 /*выползающее меню слева для маленьких экранов */
-@media screen and (max-width: 1024px) {
-  .company_bar {
-    display: none;
-  }
-  .hidden_menu {
-    display: block;
-    position: absolute;
-    top: 40px;
-    left: 0px;
-    float: left;
-    width: 18px;
-    height: -webkit-calc(100% - 60px);
-    height: calc(100% - 60px);
-    border: 1px solid #6f6f6f;
-    border-left-width: 0;
-    color: #d4d4d4;
-    -webkit-border-radius: 0px 5px 5px 0;
-            border-radius: 0px 5px 5px 0;
-    background-color: #2d2d2d;
-    background-image: url("../img/hidden.png");
-    -webkit-background-size: contain;
-            background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .hidden_menu a {
-    display: block;
-    height: 100%;
-    -webkit-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-  .hidden_menu a:hover {
-    background-color: #4d4d4d;
-    background-image: url("../img/hidden2.png");
-    -webkit-background-size: contain;
-            background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.stock_forum .company_bar a {
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.stock_forum .company_bar a:hover {
+  color: white;
+}
+
+.company_bar {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  float: left;
+  line-height: 25px;
+  margin: 0 10px;
+  color: #77b3ff;
+  font-family: 'Roboto', Tahoma, sans-serif;
+  font-size: 12px;
+  width: 155px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.hidden_menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  float: left;
+  width: 18px;
+  height: -webkit-calc(100% - 60px);
+  height: calc(100% - 60px);
+  border: 1px solid #6f6f6f;
+  border-left-width: 0;
+  color: #d4d4d4;
+  -webkit-border-radius: 0px 5px 5px 0;
+          border-radius: 0px 5px 5px 0;
+  background-color: #2d2d2d;
+  background-image: url("../img/hidden.png");
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.hidden_menu.active {
+  -webkit-transform: translate3d(165px, 0, 0);
+          transform: translate3d(165px, 0, 0);
+}
+
+.hidden_menu:hover, .hidden_menu.active {
+  background-color: #4d4d4d;
+  background-image: url("../img/hidden2.png");
+}
+
+.hidden_menu.scrolled {
+  top: 0px;
+  height: 100vh;
 }
 
 @media screen and (min-width: 1025px) {
-  .stock_forum .company_bar a {
-    -webkit-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-  .stock_forum .company_bar a:hover {
-    color: white;
-  }
-  .company_bar {
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    float: left;
-    line-height: 25px;
-    margin: 0 10px;
-    color: #77b3ff;
-    font-family: 'Roboto', Tahoma, sans-serif;
-    font-size: 12px;
-    width: 155px;
-  }
   .hidden_menu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .company_bar {
+    position: fixed;
+    height: -webkit-calc(100vh - 60px);
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+    background: #2d2d2d;
+    -webkit-transform: translate3d(-120%, 0, 0);
+            transform: translate3d(-120%, 0, 0);
+  }
+  .company_bar.active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .company_bar.scrolled {
+    top: 0px;
+    height: 100vh;
   }
 }
 
