@@ -17,6 +17,12 @@ $(document).ready(function(){
       return false;
 	});
 
+  // Hamburger
+  $('.hamburger').on('click', function(){
+    $(this).toggleClass('is-active');
+    $(this).parent().toggleClass('active');
+  });
+
   // tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
