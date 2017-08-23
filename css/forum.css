@@ -1200,6 +1200,10 @@ a.reply:hover {
   clear: both;
 }
 
+.temp_block h2 {
+  margin: .5em 0;
+}
+
 .temp_block .temp_headers li.more {
   text-align: center;
   font-weight: bold;
@@ -1222,6 +1226,12 @@ a.reply:hover {
 
 .inside_li {
   text-align: center;
+  white-space: normal;
+}
+
+.inside_li-item {
+  margin: 0.4em 0;
+  display: inline-block;
 }
 
 .inside_li:before {
@@ -1245,7 +1255,7 @@ a.reply:hover {
 }
 
 .temp_headers li {
-  padding: 10px 70px 10px 5px;
+  padding: 10px 80px 10px 5px;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -1254,6 +1264,15 @@ a.reply:hover {
 
 .temp_headers li:last-child a {
   margin: 0px;
+}
+
+@media (max-width: 850px) {
+  .temp_headers li {
+    padding-right: 20px;
+  }
+  .temp_headers--have-numbers li {
+    padding-right: 80px;
+  }
 }
 
 .last_link {
@@ -1272,7 +1291,7 @@ a.reply:hover {
 .temp_headers li b {
   font-weight: normal;
   float: right;
-  margin-right: -30px;
+  margin-right: -60px;
   clear: both;
   display: inline-block;
 }
@@ -1322,23 +1341,44 @@ h2 {
 }
 
 #indexMMVBChanges {
-  width: 50%;
+  width: -webkit-calc(50% - 10px);
+  width: calc(50% - 10px);
   float: left;
+  padding-right: 10px;
 }
 
 #indexStocksChanges {
-  width: 50%;
+  width: -webkit-calc(50% - 10px);
+  width: calc(50% - 10px);
   float: right;
+  padding-left: 10px;
 }
 
 @media (max-width: 850px) {
   #indexMMVBChanges, #indexStocksChanges {
     width: 100%;
     float: left;
+    padding: 0;
   }
   #indexStocksChanges {
     margin-top: 20px;
   }
+}
+
+.isc_container, .highcharts-container {
+  width: 100% !important;
+}
+
+.isc_container svg, .highcharts-container svg {
+  width: 100% !important;
+}
+
+.isc_container .highcharts-background, .isc_container .highcharts-series, .highcharts-container .highcharts-background, .highcharts-container .highcharts-series {
+  width: 100% !important;
+}
+
+.isc_container .highcharts-yaxis-labels, .isc_container .highcharts-grid, .isc_container .highcharts-series-group, .highcharts-container .highcharts-yaxis-labels, .highcharts-container .highcharts-grid, .highcharts-container .highcharts-series-group {
+  max-width: 100% !important;
 }
 
 /*Выпадающее юзер-меню */
