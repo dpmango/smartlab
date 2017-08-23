@@ -63,6 +63,57 @@ $(document).ready(function(){
     }
   });
 
+  // textarea autoExpand
+  $(document).one('focus.autoExpand', 'textarea.autoExpand', function () {
+      var savedValue = this.value;
+      this.value = '';
+      this.baseScrollHeight = this.scrollHeight;
+      this.value = savedValue;
+  }).on('input.autoExpand', 'textarea.autoExpand', function () {
+      var minRows = this.getAttribute('data-min-rows') | 0,
+          rows;
+      this.rows = minRows;
+      rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+      this.rows = minRows + rows;
+  });
+
+  // show actions on hover
+  $('.write_comment_box').on('focus', function(){
+    $('.cmt_actions').fadeIn();
+  });
+
+  $('.write_comment_box').on('blur', function(){
+    if($(this).val() =='' ){
+      $('.cmt_actions').fadeOut();
+     }
+  });
+
+
+
+  // select image for textarea
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        var pasteImage = "<img src="+e.target.result+" />"
+        $('.write_comment_images').append(pasteImage);
+        // show images
+        $('.write_comment_images').addClass('active')
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $('#write_comment_image').on('change', function(){
+    readURL(this);
+  });
+
+  $('.cmt_select-image').on('click', function(){
+    $('.cmt_actions').fadeIn();
+  });
+
 
   // prev functionaloty
   function hideallDropdowns() {

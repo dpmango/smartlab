@@ -551,17 +551,65 @@ html
   overflow: hidden
   position: relative
 
-.write_comment_box
+.write_comment
+  position: relative
+  transform: translate3d(0,-2px,0)
   border: 2px solid #e2e2e2
-  height: 50px
+
+.write_comment_box
+  display: block
+  width: 100%
+  -webkit-apperance: none
+  box-sizing: border-box
+  box-shadow: none
+  border: 0
+  min-height: 46px
+  padding: 7px 10px
+  font-size: 14px
+  resize: vertical
   transition: all $transitionSpeed $ease
   &:hover
-    border: 2px solid #77b3ff
+    border-color: #77b3ff
+  ::placeholder
+    line-height: 30px
+    color: #a9a9a9
 
-.comment-notif
-  margin: 20px 0 0 10px
-  line-height: 30px
-  color: #a9a9a9
+.write_comment_images
+  height: 0
+  &.active
+    height: auto
+    padding: 10px
+  img
+    max-height: 50px
+    max-width: 100px
+    margin-right: 10px
+    border: 2px solid #e2e2e2
+
+.cmt_actions
+  display: none
+  background: #e2e2e2
+  padding: 5px 10px
+
+
+.cmt_select-image
+  display: inline-block
+  position: relative
+  font-size: 0
+  cursor: pointer
+  overflow: hidden
+  height: 20px
+  input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    z-index: -1
+  label
+    display: inline-block
+    cursor: pointer
+
+
+
 
 /*--------------Комментарии форума--------------
 
@@ -933,6 +981,19 @@ h2
     margin-right: 15px
   .temp_micex_info
     display: inline
+
+
+/**************  svg иконки **************/
+.ico
+  display: inline-block
+  content: ' '
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  &-photo
+    background-image: svg-load('../img/svg/photo.svg', fill=#77b3ff)
+    width: 20px
+    height: 20px
 
 /**************  Тултип **************/
 .tooltip
