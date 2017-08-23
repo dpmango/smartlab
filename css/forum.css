@@ -1071,6 +1071,15 @@ html {
   line-height: 19px;
 }
 
+.company_description--text {
+  color: #555;
+  font-size: .75rem;
+}
+
+.company_description--text h2 {
+  color: black;
+}
+
 .company_description h2 {
   margin: 1em 0;
 }
@@ -1192,6 +1201,22 @@ a.reply:hover {
 }
 
 /*Конец Формат меню под комментарием */
+/******** Адаптивность - уменьшаем шрифты */
+@media (max-width: 414px) {
+  .stock_forum {
+    font-size: 14px;
+  }
+  .stock_forum h1 {
+    font-size: 20px;
+  }
+  .cm_wrap {
+    font-size: 13px;
+  }
+  .company_description {
+    font-size: 12px;
+  }
+}
+
 /*Временные стили */
 .temp_block {
   display: block;
