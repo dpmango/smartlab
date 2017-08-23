@@ -602,10 +602,14 @@ ul.navitext li {
     position: fixed;
     height: -webkit-calc(100vh - 60px);
     height: calc(100vh - 60px);
-    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow-y: auto;
     background: #2d2d2d;
     -webkit-transform: translate3d(-120%, 0, 0);
             transform: translate3d(-120%, 0, 0);
+  }
+  .company_bar ::-webkit-scrollbar {
+    display: none;
   }
   .company_bar.active {
     -webkit-transform: translate3d(0, 0, 0);

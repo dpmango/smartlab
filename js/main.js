@@ -20,7 +20,7 @@ $(document).ready(function(){
   // Hamburger
   $('.hamburger').on('click', function(){
     $(this).toggleClass('is-active');
-    $(this).parent().toggleClass('active');
+    // $(this).parent().toggleClass('active');
   });
 
   // tooltip
