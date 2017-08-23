@@ -1148,12 +1148,27 @@ a.reply:hover {
 }
 
 .temp_micex_info {
+  vertical-align: baseline;
+  margin-left: 10px;
   text-align: center;
 }
 
 .temp_micex_info i {
   font-style: normal;
   font-size: 1.5em;
+}
+
+.temp_micex_info_item {
+  margin: .5em 0;
+  display: inline-block;
+}
+
+.temp_micex_info_item i {
+  vertical-align: baseline;
+}
+
+.temp_micex_info_item span {
+  vertical-align: baseline;
 }
 
 h2 {
@@ -1289,17 +1304,17 @@ h2 {
 }
 
 .nocenter {
-  margin-top: 1em;
+  margin-top: .5em;
 }
 
 .stock_forum .nocenter h1 {
   text-align: left;
   display: inline;
+  margin-right: 15px;
 }
 
 .stock_forum .nocenter .temp_micex_info {
   display: inline;
-  margin-left: 2em;
 }
 
 /**************  Тултип **************/
