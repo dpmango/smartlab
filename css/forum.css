@@ -1206,7 +1206,7 @@ a.reply:hover {
   background-color: #ffffff;
   border: 1px solid transparent;
   font-size: 1.5em;
-  padding: 10px 0;
+  padding: 0px 0;
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -1214,6 +1214,10 @@ a.reply:hover {
 
 .temp_block .temp_headers li.more:hover {
   border: 1px solid #99d4ff;
+}
+
+.temp_block .temp_headers li.more a {
+  display: block;
 }
 
 .inside_li {
@@ -1241,7 +1245,7 @@ a.reply:hover {
 }
 
 .temp_headers li {
-  padding: 10px 70px 10px 0;
+  padding: 10px 70px 10px 5px;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -1253,8 +1257,10 @@ a.reply:hover {
 }
 
 .last_link {
+  display: inline-block;
+  vertical-align: 10px;
   margin: 0px;
-  padding: 0px;
+  padding: 0px 0 12px 0;
 }
 
 /*.temp_headers li:hover{border: 3px solid #6B6B6B;} */
@@ -1323,6 +1329,16 @@ h2 {
 #indexStocksChanges {
   width: 50%;
   float: right;
+}
+
+@media (max-width: 850px) {
+  #indexMMVBChanges, #indexStocksChanges {
+    width: 100%;
+    float: left;
+  }
+  #indexStocksChanges {
+    margin-top: 20px;
+  }
 }
 
 /*Выпадающее юзер-меню */

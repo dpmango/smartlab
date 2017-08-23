@@ -838,10 +838,12 @@ a.reply
     background-color: #ffffff
     border: 1px solid transparent
     font-size: 1.5em
-    padding: 10px 0
+    padding: 0px 0
     transition: all $transitionSpeed $ease
     &:hover
       border: 1px solid #99d4ff
+    a
+      display: block
 
 .inside_li
   text-align: center
@@ -865,14 +867,16 @@ a.reply
   li
     &:last-child a
       margin: 0px
-    padding: 10px 70px 10px 0
+    padding: 10px 70px 10px 5px
     white-space: nowrap
     text-overflow: ellipsis
     overflow: hidden
 
 .last_link
+  display: inline-block
+  vertical-align: 10px
   margin: 0px
-  padding: 0px
+  padding: 0px 0 12px 0
 
 /*.temp_headers li:hover{border: 3px solid #6B6B6B;}
 
@@ -925,6 +929,13 @@ h2
 #indexStocksChanges
   width: 50%
   float: right
+
+@media(max-width: 850px)
+  #indexMMVBChanges, #indexStocksChanges
+    width: 100%
+    float: left
+  #indexStocksChanges
+    margin-top: 20px
 
 /*Выпадающее юзер-меню
 
