@@ -934,6 +934,30 @@ html {
   font-weight: normal;
 }
 
+.cm_ftr .drop-menu-main {
+  position: relative;
+  float: none;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.cm_ftr .drop-menu-main-sub {
+  right: 0;
+  margin: 0;
+}
+
+.cm_ftr #cm_opt {
+  margin-left: 0;
+}
+
+.cm_ftr .drop-down {
+  padding: 0;
+}
+
+.cm_ftr .drop-down a {
+  padding: 0;
+}
+
 /*---------------------------Факторы роста и падения----------------------------- */
 .list-reasons {
   list-style-image: url("../img/up.gif");
