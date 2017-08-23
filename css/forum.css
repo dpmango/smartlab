@@ -1007,6 +1007,17 @@ html {
   margin-right: 5px;
 }
 
+@media (max-width: 850px) {
+  .reasons-up, .reasons-down {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  .reasons-down {
+    margin-top: 20px;
+  }
+}
+
 .add-factor {
   text-align: center;
   height: 100%;
@@ -1016,6 +1027,17 @@ html {
 /*----------------------------Футер с новостями---------------------------- */
 .news-wrapper {
   background-color: #2d2d2d;
+  padding-top: 20px;
+}
+
+.news-wrapper .inside {
+  padding: 0px 10px;
+}
+
+.news-head {
+  display: block;
+  text-align: center;
+  padding: 1em 0;
 }
 
 .fooooooter {
@@ -1047,6 +1069,10 @@ html {
   margin: 0 10px 20px 10px;
   font-size: 14px;
   line-height: 19px;
+}
+
+.company_description h2 {
+  margin: 1em 0;
 }
 
 .logo_place {
