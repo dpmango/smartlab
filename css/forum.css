@@ -128,6 +128,7 @@ blockquote, q {
   display: inline;
   width: 190px;
   position: absolute;
+  left: 0;
   padding: 9px 10px 0 50px;
   margin-left: 5px;
   z-index: 100;
@@ -190,6 +191,12 @@ blockquote, q {
   transition: opacity 0.3s ease;
 }
 
+@media screen and (max-width: 450px) {
+  .upbar input {
+    padding-left: 10px;
+  }
+}
+
 input {
   -webkit-transition: all 0.25s cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 0.25s cubic-bezier(0.42, 0, 0.58, 1);
@@ -250,6 +257,12 @@ input:focus {
   font-size: 2em;
 }
 
+@media (max-width: 450px) {
+  .abc-link {
+    display: none;
+  }
+}
+
 .search_q {
   display: inline-block;
   width: 100%;
@@ -257,7 +270,13 @@ input:focus {
 
 @media (max-width: 450px) {
   .search_q {
-    display: none;
+    width: 80%;
+  }
+}
+
+@media (max-width: 370px) {
+  .search_q {
+    width: 65%;
   }
 }
 
@@ -523,9 +542,9 @@ ul.navitext li {
 
 /*выползающее меню слева для маленьких экранов */
 .stock_forum .company_bar a {
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 
 .stock_forum .company_bar a:hover {
@@ -554,6 +573,7 @@ ul.navitext li {
   display: block;
   position: fixed;
   top: 50px;
+  bottom: 0;
   left: 0px;
   float: left;
   width: 18px;
@@ -588,7 +608,7 @@ ul.navitext li {
 
 .hidden_menu.scrolled {
   top: 0px;
-  height: 100vh;
+  height: 100%;
 }
 
 @media screen and (min-width: 1025px) {
@@ -600,8 +620,9 @@ ul.navitext li {
 @media screen and (max-width: 1024px) {
   .company_bar {
     position: fixed;
-    height: -webkit-calc(100vh - 60px);
-    height: calc(100vh - 60px);
+    height: -webkit-calc(100% - 60px);
+    height: calc(100% - 60px);
+    bottom: 0;
     -ms-overflow-style: none;
     overflow-y: auto;
     background: #2d2d2d;
@@ -617,7 +638,7 @@ ul.navitext li {
   }
   .company_bar.scrolled {
     top: 0px;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -944,6 +965,12 @@ html {
 .cm_ftr .drop-menu-main-sub {
   right: 0;
   margin: 0;
+  background: white;
+  border-color: #e2e2e2;
+}
+
+.cm_ftr .drop-menu-main-sub a {
+  color: #2d2d2d;
 }
 
 .cm_ftr #cm_opt {
@@ -1201,22 +1228,6 @@ a.reply:hover {
 }
 
 /*Конец Формат меню под комментарием */
-/******** Адаптивность - уменьшаем шрифты */
-@media (max-width: 414px) {
-  .stock_forum {
-    font-size: 14px;
-  }
-  .stock_forum h1 {
-    font-size: 20px;
-  }
-  .cm_wrap {
-    font-size: 13px;
-  }
-  .company_description {
-    font-size: 12px;
-  }
-}
-
 /*Временные стили */
 .temp_block {
   display: block;
@@ -1519,12 +1530,32 @@ h2 {
 
 .stock_forum .nocenter h1 {
   text-align: left;
-  display: inline;
+  display: inline-block;
   margin-right: 15px;
+  margin-bottom: .5em;
 }
 
 .stock_forum .nocenter .temp_micex_info {
   display: inline;
+}
+
+/******** Адаптивность - уменьшаем шрифты */
+@media (max-width: 414px) {
+  .stock_forum {
+    font-size: 14px;
+  }
+  .stock_forum h1 {
+    font-size: 20px;
+  }
+  .cm_wrap {
+    font-size: 13px;
+  }
+  .company_description {
+    font-size: 12px;
+  }
+  .temp_micex_info i {
+    font-size: 1.2em;
+  }
 }
 
 /**************  svg иконки **************/

@@ -103,6 +103,7 @@ blockquote, q
   display: inline
   width: 190px
   position: absolute
+  left: 0
   padding: 9px 10px 0 50px
   margin-left: 5px
   z-index: 100
@@ -115,6 +116,7 @@ blockquote, q
   display: flex
   left: 250px
   top: -2px
+
 
 @media screen and (max-width: 850px)
   .upbar_logo
@@ -144,6 +146,11 @@ blockquote, q
     &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
       opacity: 0
       transition: opacity 0.3s ease
+
+@media screen and (max-width: 450px)
+  .upbar input
+    padding-left: 10px
+
 
 input
   transition: all $transitionSpeed cubic-bezier(0.42, 0, 0.58, 1)
@@ -182,13 +189,21 @@ input
   #abc1
     font-size: 2em
 
+@media(max-width: 450px)
+  .abc-link
+    display: none
+
 .search_q
   display: inline-block
   width: 100%
 
 @media(max-width: 450px)
   .search_q
-    display: none
+    width: 80%
+
+@media(max-width: 370px)
+  .search_q
+    width: 65%
 
 .upbar_usermenu
   display: block
@@ -365,7 +380,7 @@ ul.navitext li
 /*выползающее меню слева для маленьких экранов
 
 .stock_forum .company_bar a
-  transition: all $transitionSpeed $ease
+  transition: color $transitionSpeed $ease
   &:hover
     color: white
 
@@ -387,6 +402,7 @@ ul.navitext li
   display: block
   position: fixed
   top: 50px
+  bottom: 0
   left: 0px
   float: left
   width: 18px
@@ -409,7 +425,7 @@ ul.navitext li
     background-image: url("../img/hidden2.png")
   &.scrolled
     top: 0px
-    height: 100vh
+    height: 100%
 
 @media screen and (min-width: 1025px)
   .hidden_menu
@@ -418,7 +434,8 @@ ul.navitext li
 @media screen and (max-width: 1024px)
   .company_bar
     position: fixed
-    height: calc(100vh - 60px)
+    height: calc(100% - 60px)
+    bottom: 0
     -ms-overflow-style: none
     overflow-y: auto
     background: #2d2d2d
@@ -429,7 +446,7 @@ ul.navitext li
       transform: translate3d(0,0,0)
     &.scrolled
       top: 0px
-      height: 100vh
+      height: 100%
 
 
 /*--------------содержимое от хедера до футера--------------
@@ -657,6 +674,10 @@ html
   .drop-menu-main-sub
     right: 0
     margin: 0
+    background: white
+    border-color: #e2e2e2
+    a
+      color: #2d2d2d
   #cm_opt
     margin-left: 0
   .drop-down
@@ -829,18 +850,6 @@ a.reply
     background: url(../img/thumbs3.gif) no-repeat scroll -75px 0px
 
 /*Конец Формат меню под комментарием
-
-/******** Адаптивность - уменьшаем шрифты
-
-@media(max-width: 414px)
-  .stock_forum
-    font-size: 14px
-  .stock_forum h1
-    font-size: 20px
-  .cm_wrap
-    font-size: 13px
-  .company_description
-    font-size: 12px
 
 /*Временные стили
 
@@ -1064,11 +1073,26 @@ h2
 .stock_forum .nocenter
   h1
     text-align: left
-    display: inline
+    display: inline-block
     margin-right: 15px
+    margin-bottom: .5em
   .temp_micex_info
     display: inline
 
+
+/******** Адаптивность - уменьшаем шрифты
+
+@media(max-width: 414px)
+  .stock_forum
+    font-size: 14px
+  .stock_forum h1
+    font-size: 20px
+  .cm_wrap
+    font-size: 13px
+  .company_description
+    font-size: 12px
+  .temp_micex_info i
+    font-size: 1.2em
 
 /**************  svg иконки **************/
 .ico

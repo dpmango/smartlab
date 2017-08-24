@@ -28,8 +28,13 @@ $(document).ready(function(){
 
   // hidden menu
   $(".hidden_menu").on('click', function(){
-    $(this).toggleClass('active');
-    $('.company_bar').toggleClass('active');
+    if ( !$(this).is('.active') ){
+      $(this).addClass('active');
+      $('.company_bar').addClass('active');
+    } else {
+      $(".hidden_menu").removeClass('active');
+      $('.company_bar').removeClass('active');
+    }
   });
 
   setScrolledPos();
@@ -56,7 +61,7 @@ $(document).ready(function(){
 
   $(document).mouseup(function (e) {
     var container = new Array();
-    var value = $('.company_bar');
+    var value = $('.company_bar, .hidden_menu');
     if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
       $(".hidden_menu").removeClass('active');
       $('.company_bar').removeClass('active');
